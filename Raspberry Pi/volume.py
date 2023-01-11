@@ -4,34 +4,34 @@ from subprocess import call
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(11, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(12, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 volumeState = 0
 
 while True:
-        buttonState1 = GPIO.input(7)
-        buttonState2 = GPIO.input(11)
+        buttonState1 = GPIO.input(12)
+        buttonState2 = GPIO.input(16)
 
-        if buttonState1 == False and buttonState2 == False and volumeState != 96:
+        if buttonState1 == False and buttonState2 == False and volumeState != 88:
                 print("Switch was set to Vol HIGH")
                 print(volumeState)
-                call(["amixer", "set", "PCM", "unmute"])
-                call(["amixer", "set", "PCM", "96%"])
-                volumeState = 96
+                call(["amixer", "set", "HDMI", "unmute"])
+                call(["amixer", "set", "HDMI", "88%"])
+                volumeState = 88
                 sleep(1)
 
         if buttonState1 == True and buttonState2 == True and volumeState != 0:
                 print("Switch was set to MUTE")
                 print(volumeState)
-                call(["amixer", "set", "PCM", "mute"])
+                call(["amixer", "set", "HDMI", "mute"])
                 volumeState = 0
                 sleep(1)
 
-        if buttonState1 == True and buttonState2 == False and volumeState != 75:
+        if buttonState1 == True and buttonState2 == False and volumeState != 68:
                 print("Switch was set to Vol LOW")
                 print(volumeState)
-                call(["amixer", "set", "PCM", "unmute"])
-                call(["amixer", "set", "PCM", "75%"])
-                volumeState = 75
+                call(["amixer", "set", "HDMI", "unmute"])
+                call(["amixer", "set", "HDMI", "68%"])
+                volumeState = 68
                 sleep(1)
