@@ -26,7 +26,7 @@ Hit F4 to exit out of RetroPie / Emulation Station to the terminal.
 
 Type:
 
-git clone https://github.com/dmanlfc/arcade1up.git
+git clone https://github.com/D-an-W/arcade1up.git
 
 #### Note: If you don't have git, you can download by typing sudo apt install git
 
