@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO
+import gpiozero as GPIO
 from time import sleep
 from os import system
 
