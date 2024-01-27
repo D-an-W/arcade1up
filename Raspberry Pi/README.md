@@ -2,7 +2,7 @@
 
 Here I provide a Python script to use the Power button of the Arcade 1Up with a Raspberry Pi 5 assuming you have done similar mods to ETA Prime like so... https://www.youtube.com/watch?v=09DQCOr6zQM
 
-This script runs in the background monitoring the toggle switch & then take appropriate action accordingly.
+This script runs in the background monitoring the toggle switch & then takes appropriate action accordingly.
 
 ### Power switch
 Connect the black wire to Pin 5 (GPIO3) & the red wire to Pin 6 (Ground) of the GPIO header.
